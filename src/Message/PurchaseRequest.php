@@ -28,7 +28,7 @@ class PurchaseRequest extends AbstractRequest
         }
 
         $data['transaction_rbits'] = $this->getTransactionRbits();
-        //$data['payer_rbits'] = $this->getPayerRbits();
+        $data['payer_rbits'] = $this->getPayerRbits();
 
         $token = $this->getToken();
         if (isset($token) && !empty($token)) {
