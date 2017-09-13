@@ -194,4 +194,14 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     {
         return $this->getParameter('payerRbits');
     }
+    
+    public function getPaymentMethodType()
+    {
+        return $this->getParameter('paymentMethodType');
+    }
+
+    public function setPaymentMethodType($value)
+    {
+        return $this->setParameter('paymentMethodType', $value);
+    }    
 }
