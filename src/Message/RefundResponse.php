@@ -11,8 +11,7 @@ class RefundResponse extends AbstractResponse
 {
     public function isSuccessful()
     {
-        return is_string($this->getState())
-        && $this->getState() == 'refunded';
+        return ! $this->getCode();
     }
 
     public function getState()
